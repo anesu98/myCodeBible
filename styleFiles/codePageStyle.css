@@ -1,0 +1,218 @@
+
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+/* Color Palet */
+
+:root{
+    --mainColor1: navy;
+    --mainColor2: grey;
+    --mainColor2sub1: lightgrey;
+    --mainColor3: white;
+    --mainColor4: black;
+}
+
+/* Site Content */
+
+*{
+    margin: 0;
+    font-size: 19px;
+    font-weight: 300;
+    font-family: 'Playfair Display', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar*/
+
+nav {
+    background-color: var(--mainColor1);
+}
+
+.navcontainer {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    align-items: center;
+    width: 100vmax;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--mainColor3);
+    font-size: 23px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 70vmax;
+    list-style-type: none;
+    color: var(--mainColor3);
+}
+
+nav ul li a:hover {
+    color: var(--mainColor2);
+}
+
+
+/* Main Content Base CSS */
+
+.container {
+
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+
+/* Header CSS */
+
+.container header {
+    background-color: var(--mainColor2sub1);
+
+    height: 390px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vmax;
+
+   
+
+}
+
+.container header h1 {
+
+    height: 80px;
+    width: 80vmax;
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container header p {
+
+    height: 90px;
+    text-align: center;
+    width: 70vmax;
+    height: auto;
+}
+
+
+/* Main Content */
+
+.containerMain {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+
+/* Code Content */
+
+.containerMain .containerTopic {
+    height: 350px;
+    display: flex;
+    margin-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.containerMain .containerTopic .containerCode {
+    width: 900px;
+    height: auto;
+}
+
+.containerCode h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.containerCode p {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.containerCode code {
+    background-color: var(--mainColor2sub1);
+    padding: 10px;
+}
+
+
+
+
+/* Article and Tech Doc Content */
+
+
+.techDoc .containerTechDoc {
+    height: auto;
+    width: 100vmax;
+    background-color: var(--mainColor2);
+    color: var(--mainColor3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.techDoc .containerTechDoc .containerBlurb {
+    height: 300px;
+    width: 500px;
+    padding-top: 50px;
+}
+
+.containerBlurb h2 {
+    font-size: 24px;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.containerBlurb p {
+    font-weight: 100;
+}
+
+
+.techDoc .containerTechDoc .containerArticleList {
+    width: 800px;
+    height: 300px;
+    padding-top: 30px;
+}
+
+.containerArticleList ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.containerArticleList ul li {
+    height: 70px;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--mainColor4);
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer p {
+    color: var(--mainColor3);
+}

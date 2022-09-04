@@ -5,62 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Page - Cheetsheet</title>
+    <link rel="stylesheet" href='../../../../../styleFiles/codePageStyle.css'>
 </head>
 <body>
     <nav id="navbar">
-        <div id="logo">
-            <img src="" alt="" class="logoPhoto">
+        <div class="navcontainer">
+            <ul>
+                <li>
+                    <!--Searchbar[scope: this site]-->
+                    <a href="../../../../../index.html">[Search Here]</a>
+                </li>
+                <li>
+                    <a href="./pages/languagesIndex.html">
+                        Languages
+                        <!--dropdown: Git, Bash, JavaScript, HTML, CSS-->
+                    </a>
+                </li>
+                <li>
+                    <a href="./pages/processIndex.html">Processes</a>
+                </li>
+                <li>
+                    <a href="./pages/about.html">About</a>
+                </li>
+            </ul>
         </div>
-        <ul>
-            <li>
-                <!--Searchbar[scope: this site]-->
-            </li>
-            <li>
-                <a href="./pages/languagesIndex.html">
-                    Languages
-                    <!--dropdown: Git, Bash, JavaScript, HTML, CSS-->
-                </a>
-            </li>
-            <li>
-                <a href="./pages/processIndex.html">Processes</a>
-            </li>
-            <li>
-                <a href="./pages/about.html">About</a>
-            </li>
-        </ul>
     </nav>
-
-    <header>
-        <h1>Comments</h1>
-        <p>This section shows you how to make comments in Javascript and includes documentation that discusses the use of them through links to helpful articles and technical documentation</p>
-    </header>
     <div class="container">
-        <section>
-            <!--Just the code-->
-            <div class="containerTopic">
-                
-                <div class="conatinerCode">
-                    <h2>In Line Comments</h2>
-                    <p>Allows You to add notes at the end of your code. I.e to let a programmer know what the expected outcome would be after a specific line is run</p>
-                    <code>
-                        // inline comment
-                    </code>
+        <header>
+            <h1>Comments</h1>
+            <p>This section shows you how to make comments in Javascript and includes documentation that discusses the use of them through links to helpful articles and technical documentation</p>
+        </header>
+
+        <div class="containerMain">
+            <section>
+                <!--Just the code-->
+                <div class="containerTopic">
+                    
+                    <div class="containerCode">
+                        <h2>In Line Comments</h2>
+                        <p>Allows You to add notes at the end of your code. I.e to let a programmer know what the expected outcome would be after a specific line is run</p>
+                        <code>
+                            // inline comment
+                        </code>
+                    </div>
+                    <div class="containerCode">
+                        <h2>Multi Line Comments</h2>
+                        <p>You may need to comment out entire functions of code. Here is how you do it</p>
+                        <code>
+                            /* Multi Line Comment */
+                        </code>
+                    </div>
                 </div>
-                <div class="conatinerCode">
-                    <h2>Multi Line Comments</h2>
-                    <p>You may need to comment out entire functions of code. Here is how you do it</p>
-                    <code>
-                        /* Multi Line Comment */
-                    </code>
+            </section>
+        </div>
+
+        <section class="techDoc">
+            <div class="containerTechDoc">
+                <div class="containerBlurb">
+                    <h2>Technical Documentation and Articles To Consider</h2>
+                    <p>In this section, I've included articles and documentation that would usually be in your bookmarks that relate to the use of comments in JavaScript.</p>
+                </div>
+                <div class="containerArticleList">
+                    <ul>
+                        <li><a href="https://onextrapixel.com/10-principles-for-keeping-your-programming-code-clean/">'10 Principles for keeping your Programming Code Clean'</a> by Pamela Rodríguez Domínguez. found at <a href="https://onextrapixel.com">'Onextrapixel.com'</a></li>
+                        <li><a href="https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/">'Code Tells You How, Comments tell You Why'</a> found on <a href="https://blog.codinghorror.com">Coding Horror</a></li>
+                        <li><a href="https://blog.codinghorror.com/coding-without-comments/">'Coding Without Comments'</a> found on <a href="https://blog.codinghorror.com">Coding Horror</a></li>
+                        <li><a href="http://wiki.c2.com/?SelfDocumentingCode">'Self Documenting Code'</a>, a complete guide</li>
+                    </ul>
                 </div>
             </div>
         </section>
-        <section>
-            <!--Include technical documents from -->
-        </section>
+
         <article>
             <!--add scrolling navbar here for different sections-->
         </article>
+
+        <footer>
+            <p>copyright belongs to Anesuishe Shipe</p>
+        </footer>
     </div>
 </body>
 </html>
