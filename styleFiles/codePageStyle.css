@@ -74,8 +74,9 @@ nav ul li a:hover {
 .container header {
     background-color: var(--mainColor2sub1);
 
-    height: 40vmax;
+    height: auto;
     width: auto;
+    padding: 12vmax 0 12vmax 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -203,7 +204,12 @@ nav ul li a:hover {
 
 .containerArticleList ul li {
     height: auto;
+    font-size: 1.5vmax;
     margin-bottom: 1.7vmax;
+}
+
+.containerArticleList ul li a {
+    font-size: 1.5vmax;
 }
 
 /* footer */
