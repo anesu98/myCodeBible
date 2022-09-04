@@ -16,7 +16,7 @@
 
 *{
     margin: 0;
-    font-size: 19px;
+    font-size: 2vmax;
     font-weight: 300;
     font-family: 'Playfair Display', sans-serif;
     box-sizing: border-box;
@@ -31,15 +31,15 @@ nav {
 .navcontainer {
     display: flex;
     justify-content: center;
-    height: 80px;
+    height: 10vmax;
     align-items: center;
-    width: 100vmax;
+    width: 100%;
 }
 
 nav ul li a {
     text-decoration: none;
     color: var(--mainColor3);
-    font-size: 23px;
+    font-size: larger;
 }
 
 nav ul {
@@ -53,6 +53,7 @@ nav ul {
 nav ul li a:hover {
     color: var(--mainColor2);
 }
+
 
 
 /* Main Content Base CSS */
@@ -73,23 +74,22 @@ nav ul li a:hover {
 .container header {
     background-color: var(--mainColor2sub1);
 
-    height: 390px;
+    height: 40vmax;
     width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vmax;
+    width: 100%;
 
    
 
 }
 
 .container header h1 {
-
-    height: 80px;
-    width: 80vmax;
-    font-size: 30px;
+    height: 6vmax;
+    width: 80%;
+    font-size: larger;
     font-weight: 600;
     display: flex;
     justify-content: center;
@@ -97,12 +97,12 @@ nav ul li a:hover {
 }
 
 .container header p {
-
-    height: 90px;
+    height: auto;
     text-align: center;
-    width: 70vmax;
+    width: 80%;
     height: auto;
 }
+
 
 
 /* Main Content */
@@ -112,16 +112,16 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 150px;
 }
 
 
 /* Code Content */
 
 .containerMain .containerTopic {
-    height: 350px;
+    height: auto;
     display: flex;
-    margin-top: 60px;
+    margin-top: 7vmax;
+    margin-bottom: 5vmax;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -129,26 +129,28 @@ nav ul li a:hover {
 
 
 .containerMain .containerTopic .containerCode {
-    width: 900px;
+    width: 70%;
     height: auto;
+    margin-bottom: 5vmax;
 }
 
 .containerCode h2 {
-    font-size: 22px;
+    font-size: 2vmax;
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 1vmax;
 }
 
 .containerCode p {
-    font-size: 16px;
+    font-size: 1.5vmax;
     font-style: italic;
-    margin-bottom: 20px;
+    margin-bottom: 2.5vmax;
 }
 
 .containerCode code {
     background-color: var(--mainColor2sub1);
-    padding: 10px;
+    padding: 1vmax;
 }
+
 
 
 
@@ -158,36 +160,38 @@ nav ul li a:hover {
 
 .techDoc .containerTechDoc {
     height: auto;
-    width: 100vmax;
+    width: 100%;
     background-color: var(--mainColor2);
     color: var(--mainColor3);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
 }
 
 .techDoc .containerTechDoc .containerBlurb {
-    height: 300px;
-    width: 500px;
-    padding-top: 50px;
+    height: auto;
+    width: 40%;
+    margin-right: 3vmax;
 }
 
 .containerBlurb h2 {
-    font-size: 24px;
+    font-size: 2.5vmax;
     font-weight: 100;
-    margin-bottom: 10px;
+    margin-bottom: 2vmax;
 }
 
 .containerBlurb p {
     font-weight: 100;
+    font-size: 1.5vmax;
 }
 
 
 .techDoc .containerTechDoc .containerArticleList {
-    width: 800px;
-    height: 300px;
-    padding-top: 30px;
+    width: 50%;
+    height: auto;
+    padding-top: 4vmax;
+    padding-bottom: 2.3vmax;
 }
 
 .containerArticleList ul {
@@ -198,14 +202,15 @@ nav ul li a:hover {
 }
 
 .containerArticleList ul li {
-    height: 70px;
+    height: auto;
+    margin-bottom: 1.7vmax;
 }
 
 /* footer */
 
 footer {
     background-color: var(--mainColor4);
-    height: 200px;
+    height: 10vmax;
 
     display: flex;
     justify-content: center;
@@ -215,4 +220,5 @@ footer {
 
 footer p {
     color: var(--mainColor3);
+    font-size: 1.4vmax;
 }
