@@ -5,14 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Code Bible - Home</title>
+    <link rel="stylesheet" href="./styleFiles/indexStyle.css">
+    <script src="https://kit.fontawesome.com/b82e5c8e86.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
     <div class="container">
         <nav id="navbar">
-            <div id="logo">
-                <img src="" alt="" class="logoPhoto">
+            <div class="home">
+                <a href="./index.html">
+                    [Search Here]
+                    <!--When hovered, I want a search to appear here-->
+                </a>
             </div>
+        </nav>
+
+        <div id="nav2">
             <ul>
                 <li>
                     <a href="./pages/languagesIndex.html">
@@ -27,51 +35,77 @@
                     <a href="./pages/about.html">About</a>
                 </li>
             </ul>
-        </nav>
-        <div id="mainContent">
-            <header id="welcomeMessage">
-                <img src="" alt="" class="titleBackgroundImage"> <!--Cool (Proffessional) Background image-->
-                <h1 class="mainHeading">
-                    Welcome to My Code Bible!
-                </h1>
-                <p class="mainHeadingPara">
-                    Your Personal workbook including processes in your repetior of languages!
-                </p>
-                <p class="mainHeadingPara2">
-                    I know that you're always learning new things as a programmer and it's hard to keep track of what you learnt 2 months ago and where you even applied your lesson.
-                    So, I put your knowledge onto a website that essentially tracks what you learnt and where you used it.
-                </p>
-                <p class="mainHeadingPara3">
-                    In other words, think of this website as like a "Google Suggestions" kind of site.....but for programming. And It's only limit is your willingness to learn and code...
-                </p>
-            </header>
-            <div class="siteSearchContainer">
-                <section id="searchBar">
-                    <!--I want to include a search bar that's limited to across the site-->
-                </section>
+        </div>
 
-                <div class="processJSContentConatiner">
-                    <section id="lastProcess">
-                        <h3 id="lastProcessTitle"> <!--JS DOM manipulation for last visited Process-->
-                            <a></a> <!--Link To last visited process-->
-                        </h3>
-                        <p></p> <!--Last process description-->
-                        <img src="" alt=""> <!--Main Image from Last Visited Process... used as background-->
-                    </section>
-        
-                    <section id="mostVisitedProcess">
-                        <h3 id="mostVisitedProcessTitle"> <!--JS DOM manipulation for last visited Process-->
-                            <a></a> <!--Link To most visited process-->
-                        </h3>
-                        <p></p> <!--most visited process description-->
-                        <img src="" alt=""> <!--Main Image from most Visited Process... used as background-->
-                    </section>
+        <div id="mainContent">
+            <header>
+                <div id="welcomeMessage">
+                    <h1 class="mainHeading">
+                        Welcome to My Code Bible!
+                    </h1>
+                    <p class="mainHeadingPara">
+                        Your Personal workbook including processes in your repetior of languages!
+                    </p>
+                    <p class="mainHeadingPara">
+                        I know that you're always learning new things as a programmer and it's hard to keep track of what you learnt 2 months ago and where you even applied your lesson.
+                        So, I put your knowledge onto a website that essentially tracks what you learnt and where you used it.
+                    </p>
+                    <p class="mainHeadingPara">
+                        In other words, think of this website as like a "Google Suggestions" kind of site.....but for programming. And It's only limit is your willingness to learn and code...
+                    </p>
+            </div>
+            </header>
+
+            <div class="siteNav">
+                <div class="search">
+                    <input type="text" placeholder="search...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
             </div>          
         </div>
+
+        <div class="listContainer">
+            <div class="list">
+                <div class="titles">
+                    <p>Last Visited:</p>
+                    <p class="lastPageVisited">
+                        <a href="#">xyz</a>
+                    </p>    
+                </div> 
+                <div class="vDate">
+                    <p>Date Visited:</p>    
+                    <p class="dateVisited">0.0.0000</p>
+                </div> 
+            </div>
+
+            <div class="list">
+                <div class="titles">
+                    <p>Most Visited:</p>
+                    <p class="mostVisited">
+                        <a href="#">xyz</a>
+                    </p>
+                    
+                </div>
+                
+                <div class="count">
+                    <p>Times Visited:</p>
+                    <p class="visitCount">0</p>
+                </div>
+            </div>
+            <div class="list">
+                <div class="login">
+                    <p>
+                        Last Logged in:
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="test">
+                <a href="./testWebPage/index.html">For test page</a>
+            </div>
+        </footer>
     </div>
-
-
-    <a href="./testWebPage/index.html">For test page</a>
 </body>
 </html>

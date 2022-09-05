@@ -1,0 +1,287 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+/* Color Palet */
+
+:root{
+    --mainColor1: #000074;
+    --mainColor1sub1: #000050;
+    --mainColor2: grey;
+    --mainColor2sub1: lightgrey;
+    --mainColor3: white;
+    --mainColor4: black;
+    --mainColor5: orange;
+    --transparent: rgba(0,0,0,0.5);
+}
+
+/* Site Content */
+
+*{
+    margin: 0;
+    background-color: var(--mainColor1);
+    font-size: 2vmax;
+    font-weight: 300;
+    font-family: 'Playfair Display', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar*/
+
+nav {
+    background-color: var(--mainColor1);
+    border-style: none;
+}
+
+#navbar .home {
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    height: 10vmax;
+    align-items: center;
+    width: 100%;
+}
+
+nav .home a {
+    text-decoration: none;
+    color: var(--mainColor3);
+    font-size: larger;
+}
+
+#nav2 {
+    background-color: var(--mainColor3);
+    height: 4vmax;
+}
+
+#nav2 ul {
+    list-style: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#nav2 ul li {
+    background-color: transparent;
+    margin: 0 3vmax 0 3vmax;
+    height: 100%;
+    width: 15vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav2 ul li a {
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    color: var(--mainColor1sub1);
+}
+
+#nav2 ul a:hover {
+    color: var(--mainColor3);
+    background-color: var(--mainColor2);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main Content Base CSS */
+
+#mainContent {
+    height: auto;
+    width:auto;
+    background-color: var(--mainColor1);
+}
+
+/* header */
+
+#mainContent header {
+    background-color: var(--mainColor1);
+    /* I want a background image here */
+}
+
+#welcomeMessage {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10vmax 0 10vmax 0;
+}
+
+#welcomeMessage h1 {
+    background-color: transparent;
+    color: var(--mainColor3);
+    width: 70%;
+    height: auto;
+    margin: 0 0 1.3vmax 0;
+    text-align: center;
+    font-size: 4vmax;
+    font-weight: 500;
+}
+
+#welcomeMessage .mainHeadingPara {
+    background-color: transparent;
+    color: var(--mainColor3);
+    width: 70%;
+    height: auto;
+    margin: 0 0 2vmax 0;
+    font-size: 1.7vmax;
+    text-align: center;
+    font-weight: 100;
+}
+
+/* bottom nav? */
+
+.siteNav {
+    background-color: var(--mainColor3);
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* search bar */
+
+.siteNav .search {
+    background-color: transparent;
+    height: auto;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12vmax 4vmax 12vmax 4vmax;
+    margin: 5vmax 0 5vmax 0;
+}
+
+.siteNav .search input {
+    background-color: transparent;
+    color: var(--mainColor1sub1);
+    border-style: solid;
+    border-width: 0.3vmax;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.siteNav .search i {
+    color: var(--mainColor1sub1);
+    background-color: transparent;
+    margin: 0 0 0 1.2vmax;
+}
+
+/* last visit  */
+
+.listContainer {
+    background-color: var(--mainColor2sub1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    padding-top: 3vmax;
+    padding-bottom: 0vmax;
+}
+
+.listContainer .list {    
+    background-color: transparent;
+    padding: 5vmax 0 5vmax 0;
+    border-style: solid;
+    border-color: var(--mainColor2);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width: 0.1vmax;
+    width: 80%;
+    height: 8vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.listContainer .list a {
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 2vmax;
+    color: var(--mainColor1sub1);
+}
+
+.listContainer .list a:hover {
+    text-decoration: underline;
+    font-size: 2vmax;
+    color: var(--mainColor5);
+}
+
+.listContainer .list .titles {   
+    display: flex;
+    background-color: transparent;
+}
+
+.listContainer .list .titles p {  
+    background-color: transparent;
+    margin: 0 2vmax 0 0;
+    color: var(--mainColor1sub1);
+}
+
+.listContainer .list .vDate {   
+    display: flex;
+    background-color: transparent;   
+}
+
+.listContainer .list .vDate p {  
+    background-color: transparent;
+    margin: 0 4vmax 0 0;
+    color: var(--mainColor1sub1);
+    font-size: 1.6vmax;
+    font-style: italic; 
+}
+
+.listContainer .list .count {  
+    display: flex;
+    background-color: transparent;    
+}
+
+.listContainer .list .count p {
+    background-color: transparent;
+    margin: 0 4vmax 0 0;
+    color: var(--mainColor1sub1);
+    font-size: 1.6vmax;
+    font-style: italic; 
+}
+
+.listContainer .list .login {  
+    background-color: transparent;
+}
+
+.listContainer .list .login p {
+    background-color: transparent;
+    color: var(--mainColor1sub1);
+}
+/* footer */
+
+footer {
+    background-color: var(--mainColor4);
+    height: 10vmax;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .test {
+    background-color: transparent;
+}
+
+footer .test a {
+    background-color: transparent;
+    color: var(--mainColor3);
+    text-decoration: none;
+}
