@@ -1,0 +1,196 @@
+
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+/* Color Palet */
+
+:root{
+    --mainColor1: navy;
+    --mainColor2: grey;
+    --mainColor2sub1: lightgrey;
+    --mainColor3: white;
+    --mainColor4: black;
+}
+
+/* Site Content */
+
+*{
+    margin: 0;
+    background-color: var(--mainColor1);
+    font-size: 2vmax;
+    font-weight: 300;
+    font-family: 'Playfair Display', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar*/
+
+nav {
+    background-color: var(--mainColor1);
+    border-style: none;
+}
+
+.navcontainer {
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    height: 10vmax;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--mainColor3);
+    font-size: larger;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 70vmax;
+    list-style-type: none;
+    color: var(--mainColor3);
+}
+
+nav ul li a:hover {
+    color: var(--mainColor2);
+}
+
+/* Main Content Base CSS */
+
+.container {
+
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+
+/* Header CSS */
+
+#mainContent header {
+    background-color: var(--mainColor1);
+
+    height: auto;
+    width: auto;
+    padding: 12vmax 0 12vmax 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+   
+
+}
+
+#mainContent header h1 {
+    height: 6vmax;
+    width: 80%;
+    color: var(--mainColor3);
+    font-size: larger;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainContent header p {
+    height: auto;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    color: var(--mainColor3);
+}
+
+
+
+/* Main Content */
+
+#mainContent {
+}
+
+#mainContent section {
+    background-color: var(--mainColor3);
+    height: auto;
+    width: auto;
+    padding-top: 10vmax;
+    padding-bottom: 10vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#mainContent section .lang {
+    background-color: var(--mainColor3);
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainContent section .lang .container {
+    padding: 3vmax;
+    border-radius: 10px;
+    background-color: var(--mainColor2);
+    height: auto;
+    width: auto;
+    margin: 2vmax;
+}
+
+.lang .container a {
+    background-color: var(--mainColor2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--mainColor3);
+    font-size: 1.9vmax;
+}
+
+.lang .container p {
+    background-color: var(--mainColor2);
+    font-size: 1.6vmax;
+    margin-top: 0.5vmax;
+    color: var(--mainColor3);
+    text-align: center;
+}
+
+.lang .container a i {
+    background-color: var(--mainColor2);
+    font-size: 3.7vmax;
+    padding: 1.2vmax 3vmax 1.2vmax 0;
+}
+
+.lang .container a:hover {
+    color: var(--mainColor4);
+}
+
+.lang .container a p:hover {
+    color: var(--mainColor4);
+}
+
+/* footer */
+
+footer {
+    background-color: var(--mainColor4);
+    height: 10vmax;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer p {
+    background-color: var(--mainColor4);
+    color: var(--mainColor3);
+    font-size: 1.4vmax;
+}
