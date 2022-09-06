@@ -1,0 +1,233 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+/* Color Palet */
+
+:root{
+    --mainColor1: darkorange;
+    --mainColor2: gray;
+    --mainColor2sub2: lightgray;
+    --mainColor2sub1: tan;
+    --mainColor3: white;
+    --mainColor4: black;
+}
+
+/* Site Content */
+
+*{
+    margin: 0;
+    background-color: var(--mainColor1);
+    font-size: 2vmax;
+    font-weight: 300;
+    font-family: 'Playfair Display', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar*/
+
+nav {
+    background-color: var(--mainColor1);
+    border-style: none;
+}
+
+.navcontainer {
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    height: 10vmax;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--mainColor3);
+    font-size: larger;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 70vmax;
+    list-style-type: none;
+    color: var(--mainColor3);
+}
+
+nav ul li a:hover {
+    color: var(--mainColor2);
+}
+
+/* Main Content Base CSS */
+
+.container {
+
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+
+/* Header CSS */
+
+#mainContent header {
+    background-color: var(--mainColor1);
+
+    height: auto;
+    width: auto;
+    padding: 12vmax 0 12vmax 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#mainContent header .title {
+    background-color: transparent;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.4vmax;
+}
+
+#mainContent header .title h1 {
+    height: 6vmax;
+    width: auto;
+    color: var(--mainColor3);
+    font-size: 2.7vmax;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainContent header .title i {
+    height: auto;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin-right: 2vmax;
+    color: var(--mainColor3);
+    font-size: 6vmax;    
+}
+
+#mainContent header p {
+    height: auto;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    color: var(--mainColor3);
+    font-size: 1.7vmax;
+}
+
+
+
+
+/* Main Content */
+
+#mainContent .container {  
+    height: auto;
+    width: 100%;
+    background-color: var(--mainColor2sub2);
+    padding: 10vmax 0 6vmax 0;
+}
+
+#mainContent .container section {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#mainContent .container section .containerTopic {
+    width: 80%;
+    height: auto;
+
+    border-style: solid;
+    border-color: var(--mainColor1);
+    border-width: 0.5vmax;
+    border-radius: 10px 10px 0 0;;
+    margin-bottom: 5vmax;
+}
+
+.containerTopic .containerHead {
+    height: auto;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 1.2vmax;
+    padding-bottom: 1.2vmax;
+
+         
+}
+
+.containerTopic .containerHead h2 {
+    background-color: transparent;
+    color: var(--mainColor3);
+    margin-bottom: 0.4vmax;
+    font-size: 2vmax;
+}
+
+.containerTopic .containerHead p {
+    background-color: transparent;
+    color: var(--mainColor3);  
+    font-size: 1.5vmax;  
+}
+
+.conatinerCode ul {
+    width: 100%;   
+    background-color: var(--mainColor2sub1);
+    border-radius: 10px 10px 0 0;
+    padding-top: 3vmax;
+    padding-bottom: 3vmax;
+    border-style: solid;
+    border-width: 0.1vmax;
+    border-color: var(--mainColor2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.conatinerCode ul li {
+    background-color: transparent;
+    width: 70%;
+    margin-bottom: 0.8vmax;
+}
+
+.conatinerCode ul a {
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--mainColor4);
+}
+
+.conatinerCode ul a:hover {
+    text-decoration: underline;
+    color: var(--mainColor4);    
+}
+
+/* footer */
+
+footer {
+    height: 10vmax;
+    background-color: var(--mainColor4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    background-color: transparent;
+    color: var(--mainColor3);
+    font-size: 1.5vmax;
+}
