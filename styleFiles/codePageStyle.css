@@ -10,6 +10,7 @@
     --mainColor2sub1: lightgrey;
     --mainColor3: white;
     --mainColor4: black;
+    --mainColor5: darkorange;
 }
 
 /* Site Content */
@@ -77,12 +78,13 @@ nav ul li a:hover {
     height: auto;
     width: auto;
     padding: 12vmax 0 12vmax 0;
+    border-radius: 0 0 10px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-
+    color: var(--mainColor4);
    
 
 }
@@ -102,6 +104,7 @@ nav ul li a:hover {
     text-align: center;
     width: 80%;
     height: auto;
+    margin-bottom: 1.5vmax;
 }
 
 
@@ -113,6 +116,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--mainColor4);
 }
 
 
@@ -139,6 +143,19 @@ nav ul li a:hover {
     font-size: 2vmax;
     font-weight: 600;
     margin-bottom: 1vmax;
+    
+}
+
+.containerCode h2 a {
+    font-size: 2vmax;
+    font-weight: 600;
+    margin-bottom: 1vmax;
+    text-decoration: none;
+    color: var(--mainColor4);
+}
+
+.containerCode h2 a:hover {
+    color: var(--mainColor5);
 }
 
 .containerCode p {
@@ -162,6 +179,7 @@ nav ul li a:hover {
 .techDoc .containerTechDoc {
     height: auto;
     width: 100%;
+    border-radius: 7px 7px 0 0;
     background-color: var(--mainColor2);
     color: var(--mainColor3);
     display: flex;
@@ -174,7 +192,9 @@ nav ul li a:hover {
     height: auto;
     width: 40%;
     margin-right: 3vmax;
-}
+    margin-top: 2vmax;
+    margin-bottom: 2vmax;
+}   
 
 .containerBlurb h2 {
     font-size: 2.5vmax;
