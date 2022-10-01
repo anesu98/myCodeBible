@@ -164,9 +164,26 @@ nav ul li a:hover {
     margin-bottom: 2.5vmax;
 }
 
+.containerCode p b {
+    font-size: 1.5vmax;
+    font-style: italic;
+    font-weight: 700;
+    margin-bottom: 2.5vmax;
+
+}
+
+
+.containerCode .code {
+    margin-bottom: 3vmax;
+    height: auto;
+    width: auto;
+}
 .containerCode code {
     background-color: var(--mainColor2sub1);
     padding: 1vmax;
+    width: auto;
+    height: auto;
+    
 }
 
 

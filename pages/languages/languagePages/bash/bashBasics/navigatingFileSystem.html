@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Cheetsheet- Blank Code Page</title>
+    <link rel="stylesheet" href='../../../../../styleFiles/codePageStyle.css'>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="navcontainer">
+            <ul>
+                <li>
+                    <!--Searchbar[scope: this site]-->
+                    <a href="../../../../../index.html">[Search Here]</a>
+                </li>
+                <li>
+                    <a href="./pages/languagesIndex.html">
+                        Languages
+                        <!--dropdown: Git, Bash, JavaScript, HTML, CSS-->
+                    </a>
+                </li>
+                <li>
+                    <a href="./pages/processIndex.html">Processes</a>
+                </li>
+                <li>
+                    <a href="./pages/about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Navigating Your File System</h1>
+            <p>Here, I'm going to be talking about the navigation commands that you need to know to move around comfortably in the terminal</p>
+            <p>The series I'll be using for these pages will be in the techical documentaion section</p>
+        </header>
+
+        <div class="containerMain">
+            <section>
+                <!--Just the code-->
+                <div class="containerTopic">
+                    <div class="containerCode">
+                        <h2>Relative Paths</h2>
+                        <p>These are used together with some of the other movement commands to let the terminal know which directory you are refering to</p>
+                        <p>One fullstop would refer to the current directory</p>
+                        <div class="code">
+                            <code>
+                                .
+                            </code>
+                        </div>
+                        <p>2 fullstops would refer to the parant directory (previous directory).</p>
+                        <div class="code">
+                            <code>
+                                ..
+                            </code>
+                        </div>
+                    </div>
+                    <div class="containerCode">
+                        <h2>Print Working Directory</h2>
+                        <p>This command will print where we currently are on the file system in your terminal.</p>
+                        <code>
+                            $   pwd
+                        </code>
+                    </div>
+                    <div class="containerCode">
+                        <h2>Listing Items</h2>
+                        <p>This command will list all of the files currently located in the directory that you are in on your terminal.</p>
+                        <div class="code">
+                            <code>
+                                $   ls
+                            </code>
+                        </div>
+                        <p>The command 'ls' alone doesn't show the <b>hidden files</b> in your directory. To see these you need to use;</p>
+                        <div class="code">
+                            <code>
+                                $   ls -a
+                            </code>
+                        </div>
+                        <p>This will list out <b>more information</b> about the files in your directory by doing so in <b>long form</b>. It will show you data information, permissions, user/group owners and sizes information.</p>
+                        <div class="code">
+                            <code>
+                                $   ls -l
+                            </code>
+                        </div>
+                        <p>Combining commands 'la' and 'ls' will show you the long form information of all files AND hidden files.</p>
+                        <div class="code">
+                            <code>
+                                $   ls -la
+                            </code>
+                        </div>
+                    </div>
+                    <div class="containerCode">
+                        <h2>Change Directory</h2>
+                        <p>This command will do one of 2 things.</p>
+                        <p>Using 'cd' alone will take you to the main directory.</p>
+                        <div class="code">
+                            <code>
+                                $ cd
+                            </code>
+                        </div>
+                        <p>You can also travel to your home directory by using a '~' after you use the cd command</p>
+                        <div class="code">
+                            <code>
+                                $   cd ~
+                            </code>
+                        </div>
+                        <p>Using 'cd' and a file location within the current directory you are in will take you to that file.</p>
+                        <div class="code">
+                            <code>
+                                $ cd thisFileRightHere
+                            </code>
+                        </div>
+                        <p>To navigate backwards to our parent directory, you would use 'cd' with 2 fullstops (the parent directory relate path)</p>
+                        <div class="code">
+                            <code>
+                                $ cd ..
+                            </code>
+                        </div>
+                        <p>You can travel through multiple directories if you know the name of the directories by splitting them with a '/'. In the example below, this will take you forward by 2 directories.</p>
+                        <div class="code">
+                            <code>
+                                $   cd randomFolder/folderInsideRandomFolder
+                            </code>
+                        </div>
+                        <p>If you want to go back more than one folder at a time, you can use a similar principle where you chain '..'s with a '/' to go back folders. i.e: will take you back 2 directories.</p>
+                        <div class="code">
+                            <code>
+                                $   cd ../../
+                            </code>
+                        </div>
+                        <p>Using the '~' command with a '/' command, you can direct yourself to a completely different directory starting from the path in your home directory. i.e lets say I'm in working on one project and I quickly need to switch to a different one. If I know my 'repos' folder is on my home directory, I can just switch to my repos folder by using this command: <b>PS... don't include the space between the '~' and the '/'</b></p>
+                        <div class="code">
+                            <code>
+                                $   cd ~ /repos/
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="techDoc">
+            <div class="containerTechDoc">
+                <div class="containerBlurb">
+                    <h2>Technical Documentation and Articles To Consider</h2>
+                    <p>In this section, I've included articles and documentation that would usually be in your bookmarks that relate to the use of comments in JavaScript.</p>
+                </div>
+                <div class="containerArticleList">
+                    <ul>
+                        <li><a href="#">'#'</a></li>
+                        <li><a href="#">'#'</a></li>
+                        <li><a href="#">'#'</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <article>
+            <!--add scrolling navbar here for different sections-->
+        </article>
+
+        <footer>
+            <p>copyright belongs to Anesuishe Shipe</p>
+        </footer>
+    </div>
+</body>
+</html>
