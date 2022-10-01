@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Cheetsheet- Blank Code Page</title>
+    <link rel="stylesheet" href='../../../../../styleFiles/codePageStyle.css'>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="navcontainer">
+            <ul>
+                <li>
+                    <!--Searchbar[scope: this site]-->
+                    <a href="../../../../../index.html">[Search Here]</a>
+                </li>
+                <li>
+                    <a href="../../../../languagesIndex.html">
+                        Languages
+                        <!--dropdown: Git, Bash, JavaScript, HTML, CSS-->
+                    </a>
+                </li>
+                <li>
+                    <a href="../../../../processIndex.html">Processes</a>
+                </li>
+                <li>
+                    <a href="../../../../about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Copy, Move, Rename and Delete</h1>
+            <p>Here I will be talking about; creating files and directories, moving files and directories, copying files and directories, re-naming files and deleting files and directories all from your terminal. Sounds like a dream, right?</p>
+        </header>
+
+        <div class="containerMain">
+            <section>
+                <!--Just the code-->
+                <div class="containerTopic">
+                    <div class="containerCode">
+                        <h2>Creating Directories</h2>
+                        <p>This is pretty straightforward. So, to create a directory i will use the command 'mkdir' and your new directory name;</p>
+                        <div class="code">
+                            <code>
+                                $ mkdir directoryName
+                            </code>
+                        </div>
+
+                        <h2>Creating Files</h2>
+                        <p>This is also pretty straightforward. You just use the 'touch' command and the new file name written with the new file's filetype. i.e: </p>
+                        <div class="code">
+                            <code>
+                                $ touch testFile.txt
+                            </code>
+                        </div>
+
+                        <h2>Copying Files</h2>
+                        <p>To copy files, you use the 'cp' command followed by the file you want to copy. This will duplicate the file within the current directory</p>
+                        <div class="code">
+                            <code>
+                                $ cp test_file.txt
+                            </code>
+                        </div>
+
+                        <h2>Copying Directories</h2>
+                        <p>This is a little bit different to copying files.</p>
+                        <p><em>Method 1</em></p>
+                        <p>First, create the file location you want to copy to using 'mkdir' [in the current directory]</p>
+                        <p>Then use the command 'cp', then the command '-R', and then the file you're copying, and then the new directory you're copying the files to. i.e</p>
+
+                        <div class="code">
+                            <code>
+                                $ cp -R old/ new/
+                            </code>
+                        </div>
+
+                        <h2>Renaming a file</h2>
+                        <p>Renaming files is a little wierd. You use the 'mv' command and move the file to the same directory with a different name. You do this by stating which file you want to move and then the file name you want it to have i.e:</p>
+                        <div class="code">
+                            <code>
+                                $ mv test.txt newFile.txt
+                            </code>
+                        </div>
+
+                        <h2>Renaming a Directory</h2>
+                        <p>Same as renaming a file. i.e</p>
+                        <div class="code">
+                            <code>
+                                mv oldDir/ newDir
+                            </code>
+                        </div>
+
+                        <h2>Moving a file <b>without</b> renaming the file</h2>
+                        <p>We do this by stating the new location and no file name</p>
+                        <p>To move a file into a location within the file's directory, you use the command:</p>
+                        <div class="code">
+                            <code>
+                                $ mv test.txt  subDirectory1/
+                            </code>
+                        </div>
+                        <p>To move the file to a parent directory, you would use:</p>
+                        <div class="code">
+                            <code>
+                                $ mv test.txt ../
+                            </code>
+                        </div>
+
+                        <h2>Moving a Directory <b>without</b> renaming it</h2>
+                        <p>The process is the same as moving files.</p>
+                        <p>Moving the directory into a subdirectory:</p>
+                        <p><em>ps, if the file you're moving isn't empty, you need to add the file name to the sub directory declaration. i.e subDir/movedDir</em></p>
+                        <div class="code">
+                            <code>
+                                $ mv newDir/ subDirectory1/
+                            </code>
+                        </div>
+                        <p>Moving the directory into a parent Directory:</p>
+                        <div class="code">
+                            <code>
+                                $ mv newDir/ ../
+                            </code>
+                        </div>
+
+                        <h2>Moving a file <b>and</b> renaming the file</h2>
+                        <p>To move the file into a sub directory within the current directory, you would use the command:</p>
+                        <div class="code">
+                            <code>
+                                $ test.txt  subDirectory1/newName.txt
+                            </code>
+                        </div>
+                        <p>to move the file into the parent directory with a new name, you would use:</p>
+                        <div class="code">
+                            <code>
+                                $ mv newName.txt  ../test.txt
+                            </code>
+                        </div>
+
+                        <h2>Moving a Directory <b>and</b> renaming it</h2>
+                        <p>Same process as moving the files and renaming it</p>
+                        <p>To move and rename the directory to a sub directory:</p>
+                        <div class="code">
+                            <code>
+                                $ mv oldDir subDirectory/newDirName
+                            </code>
+                        </div>
+                        <p>To move the directory to a parent directory:</p>
+                        <div class="code">
+                            <code>
+                                $ mv oldDir ../newDirName
+                            </code>
+                        </div>
+
+                        <h2>Deleting Files</h2>
+                        <p>To delete files, you use the 'rm' command and name the file you want to remove</p>
+                        <p><em>Warning: Deleting files from the terminal is permanent. There is no warnings given when deleting files and also, there is no recovering the files from your trashcan folder</em></p>
+                        <div class="code">
+                            <code>
+                                $ rm test.txt
+                            </code>
+                        </div>
+
+                        <h2>Deleting Directories</h2>
+                        <p>Similar process to copying a directory. When deleting a directory, you need to add the '-R' to the 'rm' command. i.e:</p>
+                        <div class="code">
+                            <code>
+                                $ rm -R deleteDirectory
+                            </code>
+                        </div>
+                        <p>You might run into some files that refuse to delete. For this use the '-rf' command. But as always, <em>be careful as these files will never come back....</em>unless you have a backup somewhere</p>
+                        <div class="code">
+                            <code>
+                                $ rm -rf forceDeleteDirectory
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="techDoc">
+            <div class="containerTechDoc">
+                <div class="containerBlurb">
+                    <h2>Technical Documentation and Articles To Consider</h2>
+                    <p>In this section, I've included articles and documentation that would usually be in your bookmarks that relate to the use of comments in JavaScript.</p>
+                </div>
+                <div class="containerArticleList">
+                    <ul>
+                        <li><a href="#">'#'</a></li>
+                        <li><a href="#">'#'</a></li>
+                        <li><a href="#">'#'</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <article>
+            <!--add scrolling navbar here for different sections-->
+        </article>
+
+        <footer>
+            <p>copyright belongs to Anesuishe Shipe</p>
+        </footer>
+    </div>
+</body>
+</html>

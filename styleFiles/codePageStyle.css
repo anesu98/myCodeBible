@@ -11,6 +11,7 @@
     --mainColor3: white;
     --mainColor4: black;
     --mainColor5: darkorange;
+    --emphasis: red;
 }
 
 /* Site Content */
@@ -158,6 +159,11 @@ nav ul li a:hover {
     color: var(--mainColor5);
 }
 
+.containerCode h2 b {
+    color: var(--emphasis);
+    font-weight: 600;
+}
+
 .containerCode p {
     font-size: 1.5vmax;
     font-style: italic;
@@ -172,6 +178,11 @@ nav ul li a:hover {
 
 }
 
+.containerCode p em {
+    color: var(--emphasis);
+    font-size: 1.6vmax;
+}
+
 
 .containerCode .code {
     margin-bottom: 3vmax;
@@ -183,7 +194,7 @@ nav ul li a:hover {
     padding: 1vmax;
     width: auto;
     height: auto;
-    
+    word-spacing: 1vmax;
 }
 
 

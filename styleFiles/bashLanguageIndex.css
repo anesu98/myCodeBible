@@ -124,6 +124,13 @@ nav ul li a:hover {
     height: auto;
     color: var(--mainColor6);
     font-size: 1.7vmax;
+    margin-bottom: 2vmax;
+}
+
+#mainContent header em {
+    font-size: 1.7vmax;
+    color: var(--mainColor4);
+    word-spacing: 1.2vmax;
 }
 
 
