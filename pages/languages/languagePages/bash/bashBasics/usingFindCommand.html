@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Cheetsheet- Blank Code Page</title>
+    <link rel="stylesheet" href='../../../../../styleFiles/codePageStyle.css'>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="navcontainer">
+            <ul>
+                <li>
+                    <!--Searchbar[scope: this site]-->
+                    <a href="../../../../../index.html">[Search Here]</a>
+                </li>
+                <li>
+                    <a href="../../../../languagesIndex.html">
+                        Languages
+                        <!--dropdown: Git, Bash, JavaScript, HTML, CSS-->
+                    </a>
+                </li>
+                <li>
+                    <a href="../../../../processIndex.html">Processes</a>
+                </li>
+                <li>
+                    <a href="../../../../about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Using the 'find' command</h1>
+            <p>On this page, I'll be talking about how to use the find command.</p>
+            <p>This is used to quickly and efficiantly scan through our file system to find files and directories that meet a certain criteria. We can even perform actions on those results.</p>
+            <p>Like stated in the contents page, all this information can also be quickly found by typing in <em>$ man find</em> on the command line.</p>
+        </header>
+
+        <div class="containerMain">
+            <section>
+                <!--Just the code-->
+                <div class="containerTopic">
+                    <div class="containerCode">
+                        <h2>Find (current directory)</h2>
+                        <p>I can use this to find all files and sub directories starting within current working directory by using this command</p>
+                        <div class="code">
+                            <code>
+                                $ find .
+                            </code>
+                        </div>
+
+                        <h2>Find (specific directory)</h2>
+                        <p>I can use find to find files and folders within specific directories by specifying the directory. i.e:</p>
+                        <div class="code">
+                            <code>
+                                $ find directoryOne
+                            </code>
+                        </div>
+
+                        <h2>Find (filtered)</h2>
+                        <p>I can filter the type of content I search for by using the '-type' command along with the specification 'd'. i.e:</p>
+                        <div class="code">
+                            <code>
+                                $ find . -type d
+                            </code>
+                        </div>
+                        <p>I can do the same with files by just switching out the 'd' with an 'f'. i.e:</p>
+                        <div class="code">
+                            <code>
+                                $ find . -type f
+                            </code>
+                        </div>
+
+                        <h2>Find files (specific name)</h2>
+                        <p>Let's say I know that somewhere within the directory I am in, I am aware of a file that exists by a certain name, but don't know where it would be. I could use:</p>
+                        <div class="code">
+                            <code>
+                                $ find . -type f -name "test_1.txt"
+                            </code>
+                        </div>
+                        <p>If I only know part of the name, but not the whole file name, I could use the broad word followed by an '*'. <em>The 'name' parameter here is case sensitive, btw</em>:</p>
+                        <div class="code">
+                            <code>
+                                $ find . -type -f -name "test*"
+                            </code>
+                        </div>
+                        <p><em>If you want the case insensitive version</em>, you would search with the 'iname' parameter instead. i.e:</p>
+                        <div class="code">
+                            <code>
+                                $ find . -type -f -iname "test*"
+                            </code>
+                        </div>
+
+                        <h2>Using the '*'</h2>
+                        <p>The star is a wildcard statement. You can even use it when searching for all files with a specific file type. i.e:</p>
+                        <div class="code">
+                            <code>
+                                $ find . -type f -name "*.py"
+                            </code>
+                        </div>
+                        <p>This would find all the python files in the scope of the current directory.</p>
+                        
+                        <h2>Finding files through metadata</h2>
+                        <p>I can find files that were modified in the last 10 minutes by using:</p>
+                        <div class="code">
+                            <code>
+                                $ file . -type f -mmin -10
+                            </code>
+                        </div>
+                        <p><em>'-10' will find files modified less than 10 minutes ago</em></p>
+                        <p><em>'+10' will find files modified more than 10 minutes ago</em></p>
+                        <p>I can also combine these options so i can find files modified between a certain time by doubling the '-mmin' parameter. i.e:</p>
+                        <div class="code">
+                            <code>
+                                $ find . -type f -mmin +10 -mmin -40
+                            </code>
+                        </div>
+                        <p>This would find files modified between 40 minutes and over 10 minutes ago.</p>
+                        <p>Sometimes working with minutes is not ideal. For example, imagine calculating the minutes between now and 20 days ago.... That's not exactly a cause for celebration.</p>
+                        <p>for starters, we could filter using '-mtime'. i.e:</p>
+                        <div class="code">
+                            <code>
+                                $ find . -type f -mtime -12
+                            </code>
+                        </div>
+                        <p>This would find files modified at any point before 12 days ago.</p>
+                        <p>you can also use this parameter the same way you use the 'mmin' parimeter. i.e: <em>'mtime +20'</em> would search for modifications over 20 days ago. you could also combine the parameters to specify a search.</p>      
+                        <h3>Other parameters you could used</h3>
+                        <p>access date</p>
+                        <div class="code">
+                            <code>
+                                -atime
+                            </code>
+                        </div>
+                        <p>accessed minutes</p>
+                        <div class="code">
+                            <code>
+                                -amin
+                            </code>
+                        </div>
+                        <p>changed minutes</p>
+                        <div class="code">
+                            <code>
+                                -cmin
+                            </code>
+                        </div>
+                        <p>changed days</p>
+                        <div class="code">
+                            <code>
+                                -ctime
+                            </code>
+                        </div>
+
+                        <h3>Finding files by file size</h3>
+                        <p>You would use the 'size' parameter. i.e, finding files over 5mb:</p>
+                        <div class="code">
+                            <code>
+                                $ find . -size 5M
+                            </code>
+                        </div>
+                        <p>This uses similar syntax to the time synax [time uses +/- for after/before].</p>
+                        <p><em>Upper case M = megabytes</em></p>
+                        <p><em>Upper case G = gigabytes</em></p>
+                        <p><em>Lower case k = kilobytes</em></p>
+
+                        <h2>Finding empty files</h2>
+                        <p>Probably one of the most useful features of the find command is finding empty files. to use this:</p>
+                        <div class="code">
+                            <code>
+                                $ find . -empty                 
+                            </code>
+                        </div>
+
+                        <h2>Search based on permissions</h2>
+                        <p>If you need to search for files based on permissions, you can use:</p>
+                        <p><em>'777' allows anyone to view these files</em></p>
+                        <div class="code">
+                            <code>
+                                $ find . -perm 777
+                            </code>
+                        </div>
+
+                        <h2>Changing user and group permissions</h2>
+                        <p>Follow these 3 steps</p>
+                        <h3>Find the directory you want to change</h3>
+                        <div class="code">
+                            <code>
+                                $ find dir_name 
+                            </code>
+                        </div>
+                        <h3>Then use the execute command to change the owner</h3>
+                        <p>The 'chown' command is change owner and you're stating that the files owned by this person will be changed</p>
+                        <div class="code">
+                            <code>
+                                $ find dir_name -exec chown user:group
+                            </code>
+                        </div>
+                        <h3>You need to add a placeholder for this to work</h3>
+                        <p>the placeholder here would be the curly brackets and the "+" ends the script. you could also use "/;"</p>
+                        <div class="code">
+                            <code>
+                                $ find dir_name -exec chown user:group {} +
+                            </code>
+                        </div>
+
+                        <h2>Setting directory permissions to 775 and file permissions to 664</h2>
+                        <p>The directory change:</p>
+                        <p>Notice that the difference here is that you include search parameters that either state files only or directories only.</p>
+                        <p><em>The 'chmod' works like the 'chown' command</em></p>
+                        <div class="code">
+                            <code>
+                                $ find dir_name -type d -exec chmod 775 {} +
+                            </code>
+                        </div>
+                        <h3>Changing the file permissions</h3>
+                        <p>change the d to an f...</p>
+                        <div class="code">
+                            <code>
+                                $ find dir_name -type f -exec chmod 664 {} +
+                            </code>
+                        </div>
+
+                        <h2>Deleting files that end with a certain extention</h2>
+                        <p>follow the 3 steps</p>
+                        <h3>Find the file types in the destination you want the action to occur</h3>
+                        <p>Make sure to do this step to ensure you're not deleting or changing anything important</p>
+                        <div class="code">
+                            <code>
+                                $ find . -type f -name "*.jpg"
+                            </code>
+                        </div>
+                        <p>If you don't want to delete files in your hidden directories, set a 'maxdepth' perimeter.</p>
+                        <div class="code">
+                            <code>
+                                $ find . -type f -name "*.jpg" -maxdepth 1
+                            </code>
+                        </div>
+                        <p>'maxdepth' and setting it to '1' means means you'll only search down 1 directory which means the current directory</p>
+                        <h3>Then run your execution after you have the correct results</h3>
+                        <p>here the execution code is 'rm' for remove. you then add the placeholder and the 'end script' command [the '+']</p>
+                        <div class="code">
+                            <code>
+                                $ find . -type f -name "*.jpg" -maxdepth 1 -exec rm {} +
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="techDoc">
+            <div class="containerTechDoc">
+                <div class="containerBlurb">
+                    <h2>Technical Documentation and Articles To Consider</h2>
+                    <p>In this section, I've included articles and documentation that would usually be in your bookmarks that relate to the use of comments in JavaScript.</p>
+                </div>
+                <div class="containerArticleList">
+                    <ul>
+                        <li><a href="#">'#'</a></li>
+                        <li><a href="#">'#'</a></li>
+                        <li><a href="#">'#'</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <article>
+            <!--add scrolling navbar here for different sections-->
+        </article>
+
+        <footer>
+            <p>copyright belongs to Anesuishe Shipe</p>
+        </footer>
+    </div>
+</body>
+</html>

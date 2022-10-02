@@ -1,6 +1,7 @@
 
 /* Imports */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Press+Start+2P&family=Rubik&display=swap');
 
 /* Color Palet */
 
@@ -144,6 +145,14 @@ nav ul li a:hover {
     font-size: 2vmax;
     font-weight: 600;
     margin-bottom: 1vmax;
+    margin-top: 8vmax;
+    
+}
+
+.containerCode h3 {
+    font-size: 1.6vmax;
+    font-weight: 600;
+    margin-bottom: 1vmax;
     
 }
 
@@ -195,6 +204,7 @@ nav ul li a:hover {
     width: auto;
     height: auto;
     word-spacing: 1vmax;
+    font-family: 'rubik', 'Playfair Display', sans-serif;
 }
 
 
