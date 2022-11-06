@@ -32,8 +32,10 @@
     </nav>
     <div class="container">
         <header>
-            <h1></h1>
-            <p></p>
+            <h1>The Grep Command</h1>
+            <p>This stands for 'Global Regular Expression Print'</p>
+            <p>This command allows us to search for some text within files in a system and is commonly used if you know how to use it.</p>
+            <p><em>For this example, the imaginary example file will include a bunch of random names and dummy data and will be named 'names.txt'.</em></p>
         </header>
 
         <div class="containerMain">
@@ -41,13 +43,113 @@
                 <!--Just the code-->
                 <div class="containerTopic">
                     <div class="containerCode">
-                        <h2></h2>
-                        <p></p>
+                        <h2>Searching for some text within a normal file</h2>
+                        <p>An easy example to show what you can do with the GREP command. Let's say we're searching for the name 'Jane Williams'. Here we use the command, what we want so search in quotes and the location we want to search;</p>
                         <div class="code">
                             <code>
-
+                                $ grep "Jane Williams" names.txt
                             </code>
                         </div>
+                        <p>If we want to search and return a the match and not any results which include the searched phrase, we add the '-w' before our search term. This means search only these whole words;</p>
+                        <div class="code">
+                            <code>
+                                $ grep -w "Jane Williams" names.txt
+                            </code>
+                        </div>
+                        <p>GREP is case sensitive, so to make it not case sensitive, you can add an 'i' to the '-w' parameter.</p>
+                        <div class="code">
+                            <code>
+                                $ grep -wi "Jane Williams" names.txt
+                            </code>
+                        </div>
+                        <p>Sometimes we want some extra information, for example, the line in which the name appears. to do this, we can add an 'n' to the last funtion for example.</p>
+                        <div class="code">
+                            <code>
+                                $ grep -win "Jane Williams" names.txt
+                            </code>
+                        </div>
+
+                        <p><em>Just so you know, each letter added is it's own parameter. for example -i and -n. they just join together</em></p>
+
+                        <h2>Searching for text/code with context</h2>
+                        <p>Let's say you're searching a bit of computer code and want to see the context (the surrounding code) of what you just searched. you can use:</p>
+                        <p>To search for the context before the searched term is mentioned, use the parameter '-B' and the number of lines you want to see e.g to see 4 lines before;</p>
+                        <div class="code">
+                            <code>
+                                $ grep -win -B 4 "Jane Williams" names.txt
+                            </code>
+                        </div>
+                        <p>To see the context after the searched term, use the '-A' parameter with the number of lines you want to see. e.g;</p>
+                        <div class="code">
+                            <code>
+                                $ grep -win -A 4 "Jane Williams" names.txt
+                            </code>
+                        </div>
+                        <p>To see the context before and after at the same time, use the '-C' parameter;</p>
+                        <div class="code">
+                            <code>
+                                $ grep -win -C 4 "Jane Williams" names.txt
+                            </code>
+                        </div>
+
+                        <h2>Search for text in every file on a system, not just one</h2>
+                        <p>I know that just changing the file name to './' might make sense, but that would get you an error. To do this, you'd need to add an asterisk wildcard, for example;</p>
+                        <div class="code">
+                            <code>
+                                $ grep -win "Jane Williams" ./*
+                            </code>
+                        </div>
+                        <p>This will search evrything including any sub directories in the current directory and that in turn would return an error. Or the searched term might bring up too many files at once. To narrow your search, you can add a file type after the '*', e.g;</p>
+                        <div class="code">
+                            <code>
+                                $ grep -win "Jane Williams" ./*.txt
+                            </code>
+                        </div>
+                        <p>Maybe we want to search those sub directories to because you genuinely don't know what you're looking for. you can use a recursive search that uses a '-winr' parameter. This starts the search starting from the mentioned directory;</p>
+                        <div class="code">
+                            <code>
+                                $ grep -winr "Jane Williams" ./
+                            </code>
+                        </div>
+                        <p><em>notice how we no longer need the *</em></p>
+
+                        <h2>Search every file, but only return the file name</h2>
+                        <p>Let's just say you don't need to know anything else. Just the file name, you can remove the -n because you need the line number anymore and rthen add a -l to the end. e.g:</p>
+                        <div class="code">
+                            <code>
+                                $ grep -wirl "Jane Williams" ./
+                            </code>
+                        </div>
+                        <p>You can see how many times the searched term appears in a file by changing the -l to a -c. e.g:</p>
+                        <div class="code">
+                            <code>
+                                $ grep -wirc "John Williams" ./
+                            </code>
+                        </div>
+
+                        <h2>Search our command line history using GREP</h2>
+                        <p>You can use type in history in your terminal to reveal what you've been typing in. however, let's say you and to only search your git commits on the device. you can use grep by typing in:</p>
+                        <div class="code">
+                            <code>
+                                $ history | grep "git commit"  
+                            </code>
+                        </div>
+                        <p>If I only want to see commits including certain words in the messages, I can add another grep search i.e:</p>
+                        <div class="code">
+                            <code>
+                                $ history | grep "git commit" | grep "added"
+                            </code>
+                        </div>
+
+                        <h2>GREP Versions</h2>
+                        <p>The difference btween using grep on man and linux is that linux uses gnu grep and mac uses bde grep. That just means that using pearl expressions on mac won't work without a lot of work around. If this doesn't bother you (which at the time of writing it doesn't) don't worry. If it does, then use homebrew to install gnu grep on mac</p>
+                        <p>if you have gnu grep, you can use pearl accepted expressions by using a -p parameter. i.e:</p>
+                        <div class="code">
+                            <code>
+                                grep -p "\d(3)-\d(3)-\d(4)"
+                            </code>
+                        </div>
+                        <p>This should return a phone number written in any files that have written a phone number in this format now.</p>
                     </div>
                 </div>
             </section>
