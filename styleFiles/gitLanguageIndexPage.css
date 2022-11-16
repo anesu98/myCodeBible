@@ -5,13 +5,13 @@
 
 :root{
     /* backgrounds */
-    --mainColor1: black;
-    --mainColor2: #0000ffb7;
+    --mainColor1: rgba(66, 57, 49);
+    --mainColor2: yellow;
     --mainColor3: rgba(255, 255, 255, 0.88);
     /* text */
-    --mainColor4: rgb(0, 132, 0);
-    --mainColor5: rgba(159, 4, 159, 0.487);
-    --mainColor6: white;
+    --mainColor4: rgba(154, 153, 148);
+    --mainColor5: rgba(255, 25, 0);
+    --mainColor6: rgba(0, 138, 169);
 }
 
 /* Site Content */
